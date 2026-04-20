@@ -1,0 +1,29 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+import { Font } from 'astro:assets';
+const { titleTag, metaDescription } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{titleTag}</title>
+    <meta name="description" content={metaDescription} />
+  </head>
+  <body>
+    <Header />
+        <Font cssVariable="--permanent-marker" preload />
+        <Font cssVariable="--varela-round" preload />
+        <Font cssVariable="--noto-sans" preload />
+        <slot />
+    <Footer />
+    <script>
+      import "../scripts/menu.js";
+    </script>
+    <script src="https://kit.fontawesome.com/665f9ef125.js" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+---
+const { platform, link } = Astro.props;
+
+let socialIcon = "";
+
+switch(platform) {
+    case "instagram":
+        socialIcon = "fab fa-instagram";
+        break;
+    case "youtube":
+        socialIcon = "fab fa-youtube";
+        break;
+    case "linkedin":
+        socialIcon = "fab fa-linkedin";
+        break;
+    default:
+        socialIcon = "";
+}
+
+---
+
+<a href={link}><i class={socialIcon + " socialIcon"}></i></a>

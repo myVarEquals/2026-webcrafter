@@ -1,0 +1,12 @@
+---
+import Navigation from "./Navigation.astro";
+import Menu from "./Menu.astro";
+---
+
+<header>
+    <div class="w-full max-w-400 m-auto px-4 flex flex-row justify-between items-center">
+        <p id="header-logo"><a href="/">wC</a></p>
+        <Menu />
+        <Navigation navLocation="headerNav" />
+    </div>
+</header>

@@ -1,0 +1,28 @@
+---
+import Navigation from "./Navigation.astro";
+import Social from "./Social.astro";
+---
+
+<footer>
+
+    <div class="w-full max-w-400 m-auto px-4 flex flex-row justify-between items-start">
+        <div>
+            <p id="footer-logo"><a href="/">webCrafter</a></p>
+        </div>
+
+        <div>
+            <Navigation navLocation="footerNav" />
+        </div>
+
+        <div class="footerLinks">      
+            <a href="#">Privacy Policy</a>
+            <a href="#">Disclaimer</a>        
+        </div>
+
+        <div>
+            <Social platform="instagram" link="https://instagram.com" />
+            <Social platform="youtube" link="https://youtube.com" />
+            <Social platform="linkedin" link="https://linkedin.com" />
+        </div>
+    </div>
+</footer>

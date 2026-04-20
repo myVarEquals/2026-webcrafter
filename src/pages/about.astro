@@ -1,21 +1,10 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 
+const titleTag = "How We Build Faster Websites";
+const metaDescription = "Use Astro.js to build websites with lightning speed and ace page speed metrics from various vendors like PageSpeed Insights and GTMetrix";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
-		<h1>About our Tech Stack</h1>
-		<p>Learn about how we use Astro to deliver performance and SEO optimized websites</p>
-	</body>
-</html>
+<BaseLayout titleTag={titleTag} metaDescription={metaDescription}>
+  <h2>My awesome blog subtitle</h2>
+</BaseLayout>
