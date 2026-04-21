@@ -20,6 +20,6 @@
     "astro": "^6.1.8",
     "nodemailer": "^8.0.5",
     "preact": "^10.29.1",
-    "tailwindcss": "^4.2.2"
+    "tailwindcss": "^4.2.3"
   }
 }

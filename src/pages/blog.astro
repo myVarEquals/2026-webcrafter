@@ -12,7 +12,7 @@ const metaDescription = "Read about all things SEO and web performance.";
     <h1>My Awesome Blog</h1>
     <ul>
         {allPosts.map((post: any) => (
-            <BlogPost url={post.url} title={post.frontmatter.title} />
+            <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} />
         ))}
     </ul>
 </BaseLayout>

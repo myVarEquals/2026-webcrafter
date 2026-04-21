@@ -28,7 +28,9 @@ export default defineConfig({
   ],
 
   integrations: [preact()],
-  output: "server",
+
+  output: "static",
+  
   site: "https://2026-webcrafter.netlify.app",
 
   vite: {

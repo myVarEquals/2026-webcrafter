@@ -1,4 +1,6 @@
 ---
+export const prerender = false;
+
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const titleTag = "Contact Us";
@@ -6,20 +8,38 @@ const metaDescription = "Have a question? Reach out to us.";
 ---
 
 <BaseLayout titleTag={titleTag} metaDescription={metaDescription}>
-  <h1>Contact Us</h1>
-  <form action="/actions/send-email" method="post">
-      <div>
-        <label for="send-email__recipient">To:</label>
-        <input class="border" type="email" name="recipient" id="send-email__recipient" required />
-      </div>
-      <div>
-        <label for="send-email__subject">Subject:</label>
-        <input class="border" type="text" name="subject" id="send-email__subject" required />
-      </div>
-      <div>
-        <label for="send-email__message">Message:</label>
-        <textarea class="border" name="message" id="send-email__message" required></textarea>
-      </div>
-      <input class="border" type="submit" value="Send message" />
-    </form>
+
+  <div class="bg-(--wc-blue) flex flex-col w-full md:min-h-150">
+
+		<div class="flex flex-col md:flex-row w-full max-w-400 m-auto">
+
+      <div class="w-full md:w-1/2 flex flex-col gap-6 justify-center p-8">
+				<h1 class="font-sans text-2xl md:text-4xl text-white max-w-150">Contact Us</h1>
+				<p class="font-sans text-xl text-white max-w-150">Talk to us today and we will help find the solution that fits you best</p>
+			</div>
+
+			<div class="w-full md:w-1/2 md:flex flex-col justify-center items-center p-8">
+        <div class="bg-white p-12 rounded-4xl">
+          <form class="flex flex-col gap-4" action="/actions/send-email" method="post">
+            <div>
+              <label class="hidden" for="send-email__recipient">To:</label>
+              <input class="w-full border p-2 rounded-xl" type="email" name="recipient" placeholder="Name" id="send-email__recipient" required />
+            </div>
+            <div>
+              <label class="hidden" for="send-email__subject">Subject:</label>
+              <input class="w-full border p-2 rounded-xl" type="text" name="subject" placeholder="Subject" id="send-email__subject" required />
+            </div>
+            <div>
+              <label class="hidden" for="send-email__message">Message:</label>
+              <textarea class="w-full border p-2 rounded-xl" name="message" placeholder="Message" id="send-email__message" required></textarea>
+            </div>
+            <input class="w-full bg-(--wc-blue) text-white py-2 px-4 rounded-xl hover:bg-(--wc-dark-blue) uppercase" type="submit" value="Send" />
+          </form>
+        </div>
+			</div>			
+			
+		</div>		
+
+	</div>
+  
 </BaseLayout>
