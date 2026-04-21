@@ -15,7 +15,9 @@
     "@astrojs/preact": "^5.1.1",
     "@astrojs/rss": "^4.0.18",
     "@tailwindcss/vite": "^4.2.2",
+    "@types/nodemailer": "^8.0.0",
     "astro": "^6.1.8",
+    "nodemailer": "^8.0.5",
     "preact": "^10.29.1",
     "tailwindcss": "^4.2.2"
   }

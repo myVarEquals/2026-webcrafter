@@ -1,0 +1,27 @@
+---
+import Testimonial from "./Testimonial.astro"
+
+const testimonials = [
+    {
+        author: "John Doe",
+        testimonial: "WebCrafter transformed our online presence. Our website is now faster, more responsive, and has significantly improved our search engine rankings. Highly recommend their services!"
+    },
+    {
+        author: "Jane Smith",
+        testimonial: "The team at WebCrafter was fantastic to work with. They understood our needs and delivered a stunning website that perfectly represents our brand. We've seen a noticeable increase in traffic and conversions since the launch."
+    },
+    {
+        author: "Bob Johnson",
+        testimonial: "WebCrafter's expertise in SEO and web design has been a game-changer for our business. Our new website not only looks great but also ranks higher on search engines, driving more organic traffic to our site."
+    },
+]
+
+---
+
+<div class="flex flex-col lg:flex-row gap-8 w-full max-w-400 m-auto p-8">
+
+    {testimonials.map(({ author, testimonial }) => (
+        <Testimonial testimonial={testimonial} author={author} />
+    ))}
+
+</div>		
