@@ -4,7 +4,6 @@ import TestimonialSection from '../components/TestimonialSection.astro';
 import { Image } from 'astro:assets';
 import takeOff from '../images/take-off.png'
 import puzzlePiece from '../images/men-carrying-puzzle.jpg'
-import Testimonial from '../components/Testimonial.astro';
 
 const titleTag = "Lorem Ipum Dolor | Sit Amet";
 const metaDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
@@ -12,7 +11,7 @@ const metaDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 <BaseLayout titleTag={titleTag} metaDescription={metaDescription}>
 
-	<div class="bg-(--wc-blue) flex flex-col w-full md:min-h-150">
+	<div class="bg-(--wc-blue) flex flex-col w-full md:min-h-150 pt-25">
 
 		<div class="flex flex-col md:flex-row w-full max-w-400 m-auto">
 
@@ -23,7 +22,7 @@ const metaDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 			</div>
 
-			<div class="hidden md:w-1/2 md:flex flex-col justify-center items-center p-8">
+			<div class="hidden md:w-1/2 md:flex flex-col justify-center items-end p-8">
 				<Image src={takeOff} alt="A rocket taking off" class="w-4/5 bg-white p-8 rounded-[50px] rounded-tl-[50%]" />
 			</div>
 		</div>
@@ -31,13 +30,13 @@ const metaDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 	</div>
 
-	<div class="bg-white flex flex-col w-full md:min-h-150">
+	<div class="bg-neutral-100 flex flex-col w-full md:min-h-150">
 
 		<TestimonialSection />
 
 	</div>
 
-	<div class="bg-white flex flex-col w-full md:min-h-150">
+	<div class="bg-neutral-100 flex flex-col w-full md:min-h-150">
 
 		<div class="flex flex-col md:flex-row w-full max-w-400 m-auto">
 
@@ -48,7 +47,7 @@ const metaDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit
 			<div class="w-full md:w-1/2 flex flex-col gap-6 justify-center p-8">
 				<h2 class="font-sans text-2xl md:text-4xl text-(--wc-blue) max-w-150">Consectetur adipiscing elit ut enim ad minim</h2>
 				<p class="font-sans text-xl text-black max-w-150">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<a class="self-start font-sans text-xl text-white bg-(--wc-blue) hover:bg-(--wc-dark-blue) py-2 px-4 rounded" href="/about/">Learn More</a>
+				<a class="self-start font-sans text-xl text-white bg-(--wc-blue) hover:bg-(--dk-blue) py-2 px-4 rounded shadow-xl transition-all duration-300 ease" href="/about/">Learn More</a>
 			</div>
 			
 		</div>		

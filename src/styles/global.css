@@ -5,6 +5,7 @@
   --dk-blue: #0b0f2b;
 
   --font-sans: var(--noto-sans);
+  --font-permanent-marker: var(--permanent-marker);
 }
 
 * {
@@ -69,31 +70,16 @@ h1.hero-h1 {
 
 /* nav styles */
 
-header {
-    background-color: var(--dk-blue);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em 0;
-}
 
-#header-logo, #footer-logo {
+#footer-logo {
     font-family: var(--permanent-marker);
     color: #FFF;
     line-height: 1em;
 }
 
-header #header-logo {
-        font-size: 5.5rem;
-}
-
 .menu {
-  background-color: var(--dk-blue);
   border: none;
   color: #fff;
-  font-size: 1.2rem;
-  font-weight: bold;
   padding: 5px 10px;
 }
 
@@ -108,7 +94,7 @@ header #header-logo {
   display: block;
   font-family: var(--varela-round);
   text-align: center;
-  padding: 10px 0;
+  padding: 10px 0px;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 400;
@@ -117,16 +103,27 @@ header #header-logo {
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #fff;
-  color: var(--wc-blue);
+  background-color: #FFF;
+  color: #000;
+  
+  border-radius: 1rem;
 }
 
-:has(.menu[aria-expanded="true"]) .nav-links {
-  display: unset;
+/* .menu[aria-expanded="true"] */
+
+:has(.menu:focus) .nav-links {
+  display: block;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  padding: 0.5rem;
+  z-index: 10;
+  border-radius: 1rem;
 }
 
 @media screen and (min-width: 636px) {
-  .nav-links {
+  .nav-links, :has(.menu:focus) .nav-links {
     margin: 0;
     display: block;
     position: static;
@@ -136,7 +133,10 @@ header #header-logo {
 
   .nav-links a {
     display: inline-block;
-    padding: 15px 20px;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 100px;
+    transition: all 0.3s ease;
   }
 
   .menu {

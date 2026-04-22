@@ -3,9 +3,9 @@ import Navigation from "./Navigation.astro";
 import Menu from "./Menu.astro";
 ---
 
-<header>
-    <div class="w-full max-w-400 m-auto px-4 flex flex-row justify-between items-center">
-        <p id="header-logo"><a href="/">wC</a></p>
+<header class="fixed top-0 left-0 w-full flex flex-row justify-between align-center p-4">
+    <div class="w-full max-w-400 m-auto px-8 py-4 flex flex-row justify-between items-center bg-white/75 backdrop-blur-sm  rounded-2xl shadow-md">
+        <p class="font-permanent-marker text-(--wc-blue) text-7xl/14" id="header-logo"><a href="/">wC</a></p>
         <Menu />
         <Navigation navLocation="headerNav" />
     </div>
