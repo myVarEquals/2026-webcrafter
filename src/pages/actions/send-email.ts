@@ -6,7 +6,7 @@ export const prerender = false;
 export const POST: APIRoute = async ({ request, redirect }) => {
   // Get the form data submitted by the user on the home page
   const formData = await request.formData();
-  const to = formData.get("recipient") as string | null;
+  const to = import.meta.env.SEND_EMAIL_TO as string | null;
   const subject = formData.get("subject") as string | null;
   const message = formData.get("message") as string | null;
 

@@ -90,6 +90,10 @@ h1.hero-h1 {
     margin: auto;
 }
 
+#headerNav.nav-links {
+    background-color: #000;
+}
+
 .nav-links a, .footerLinks a {
   display: block;
   font-family: var(--varela-round);
@@ -101,8 +105,8 @@ h1.hero-h1 {
   color: #FFF;
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
+#headerNav.nav-links a:hover,
+#headerNav.nav-links a:focus {
   background-color: #FFF;
   color: #000;
   
@@ -111,7 +115,7 @@ h1.hero-h1 {
 
 /* .menu[aria-expanded="true"] */
 
-:has(.menu:focus) .nav-links {
+:has(.menu:focus) #headerNav.nav-links {
   display: block;
   position: absolute;
   top: calc(100% + 4px);
@@ -131,7 +135,11 @@ h1.hero-h1 {
     background: none;
   }
 
-  .nav-links a {
+  #headerNav.nav-links {
+    background-color: transparent;
+}
+
+  #headerNav.nav-links a {
     display: inline-block;
     color: #000;
     padding: 10px 20px;
