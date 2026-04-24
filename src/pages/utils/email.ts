@@ -3,6 +3,8 @@ import { createTransport, type Transporter } from "nodemailer";
 type SendEmailOptions = {
   /** Email address of the recipient */
   to: string;
+  /** Email address to use for the "Reply-To" field */
+  replyTo: string;
   /** Subject line of the email */
   subject: string;
   /** Message used for the body of the email */
@@ -13,9 +15,9 @@ export async function sendEmail(options: SendEmailOptions): Promise<Transporter>
   const transporter = await getEmailTransporter();
   return new Promise(async (resolve, reject) => {
     // Build the email message
-    const { to, subject, html } = options;
+    const { to, replyTo, subject, html } = options;
     const from = import.meta.env.SEND_EMAIL_FROM;
-    const message = { to, subject, html, from };
+    const message = { to, replyTo, subject, html, from };
     // Send the email
     transporter.sendMail(message, (err, info) => {
       // Log the error if one occurred

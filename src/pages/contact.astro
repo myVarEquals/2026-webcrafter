@@ -22,12 +22,16 @@ const metaDescription = "Have a question? Reach out to us.";
         <div class="bg-white p-12 rounded-4xl">
           <form class="flex flex-col gap-4" action="/actions/send-email" method="post">
             <div>
-              <label class="hidden" for="send-email__recipient">To:</label>
-              <input class="w-full border p-2 rounded-xl" type="email" name="recipient" placeholder="Name" id="send-email__recipient" required />
+              <label class="hidden" for="send-email__name">Name:</label>
+              <input class="w-full border p-2 rounded-xl" type="text" name="name" placeholder="Name" id="send-email__name" required />
             </div>
             <div>
-              <label class="hidden" for="send-email__subject">Subject:</label>
-              <input class="w-full border p-2 rounded-xl" type="text" name="subject" placeholder="Subject" id="send-email__subject" required />
+              <label class="hidden" for="send-email__email">Email:</label>
+              <input class="w-full border p-2 rounded-xl" type="email" name="email" placeholder="Email" id="send-email__email" required />
+            </div>
+            <div>
+              <label class="hidden" for="send-email__phone">Phone:</label>
+              <input class="w-full border p-2 rounded-xl" type="tel" name="phone" placeholder="Phone" id="send-email__phone" />
             </div>
             <div>
               <label class="hidden" for="send-email__message">Message:</label>
