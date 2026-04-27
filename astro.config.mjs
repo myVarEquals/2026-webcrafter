@@ -9,6 +9,7 @@ import netlify from '@astrojs/netlify';
 
 // https://astro.build/config
 export default defineConfig({
+
   fonts: [
     {
       provider: fontProviders.fontsource(),
@@ -30,12 +31,13 @@ export default defineConfig({
   integrations: [preact()],
 
   output: "static",
-  
+
   site: "https://2026-webcrafter.netlify.app",
 
-  vite: {
-    plugins: [tailwindcss()]
-  },
-
   adapter: netlify(),
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
+  
 });
