@@ -9,10 +9,23 @@ const metaDescription = "Read about all things SEO and web performance.";
 ---
 
 <BaseLayout titleTag={titleTag} metaDescription={metaDescription}>
-    <h1>My Awesome Blog</h1>
-    <ul>
-        {allPosts.map((post: any) => (
-            <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} />
-        ))}
-    </ul>
+
+    <div class="bg-gray-200 flex flex-col w-full md:min-h-100 pt-30">
+
+		<div class="flex flex-col md:flex-row w-full max-w-400 m-auto">
+            <div class="w-full md:w-1/2 flex flex-col gap-6 justify-center p-8">
+                <h1 class="font-sans text-2xl md:text-4xl text-(--wc-blue) max-w-150">Blog</h1>
+                <p class="font-sans text-xl text-(--wc-blue) max-w-100">Lorem ipsum dolar amet lorem ipsum dolar amet lorem ipsum dolar ametlorem</p>
+            </div>
+		</div>		
+
+	</div>
+    <div class="bg-gray-200 flex flex-col md:flex-row w-full">
+        <ul class="flex flex-col md:flex-row flex-wrap max-w-400 m-auto gap-8 p-8">
+            {allPosts.map((post: any) => (
+                <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} tags={post.frontmatter.tags} />
+            ))}
+        </ul>
+    </div>
+
 </BaseLayout>

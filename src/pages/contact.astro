@@ -9,35 +9,35 @@ const metaDescription = "Have a question? Reach out to us.";
 
 <BaseLayout titleTag={titleTag} metaDescription={metaDescription}>
 
-  <div class="bg-(--wc-blue) flex flex-col w-full md:min-h-150">
+  <div class="bg-gray-200 flex flex-col w-full md:min-h-200 pt-30 md:pt-0">
 
 		<div class="flex flex-col md:flex-row w-full max-w-400 m-auto">
 
       <div class="w-full md:w-1/2 flex flex-col gap-6 justify-center p-8">
-				<h1 class="font-sans text-2xl md:text-4xl text-white max-w-150">Contact Us</h1>
-				<p class="font-sans text-xl text-white max-w-150">Talk to us today and we will help find the solution that fits you best</p>
+				<h1 class="font-sans text-2xl md:text-4xl text-(--wc-blue) max-w-150">Contact Us</h1>
+				<p class="font-sans text-xl text-(--wc-blue) max-w-100">Lorem ipsum dolar amet lorem ipsum dolar amet lorem ipsum dolar ametlorem</p>
 			</div>
 
 			<div class="w-full md:w-1/2 md:flex flex-col justify-center items-center p-8">
-        <div class="bg-white p-12 rounded-4xl">
+        <div class="bg-white p-16 rounded-4xl shadow-xl">
           <form class="flex flex-col gap-4" action="/actions/send-email" method="post">
             <div>
               <label class="hidden" for="send-email__name">Name:</label>
-              <input class="w-full border p-2 rounded-xl" type="text" name="name" placeholder="Name" id="send-email__name" required />
+              <input class="w-full border p-4 rounded-xl" type="text" name="name" placeholder="Name" id="send-email__name" required />
             </div>
             <div>
               <label class="hidden" for="send-email__email">Email:</label>
-              <input class="w-full border p-2 rounded-xl" type="email" name="email" placeholder="Email" id="send-email__email" required />
+              <input class="w-full border p-4 rounded-xl" type="email" name="email" placeholder="Email" id="send-email__email" required />
             </div>
             <div>
               <label class="hidden" for="send-email__phone">Phone:</label>
-              <input class="w-full border p-2 rounded-xl" type="tel" name="phone" placeholder="Phone" id="send-email__phone" />
+              <input class="w-full border p-4 rounded-xl" type="tel" name="phone" placeholder="Phone" id="send-email__phone" />
             </div>
             <div>
               <label class="hidden" for="send-email__message">Message:</label>
-              <textarea class="w-full border p-2 rounded-xl" name="message" placeholder="Message" id="send-email__message" required></textarea>
+              <textarea class="w-full border p-4 rounded-xl" name="message" placeholder="Message" id="send-email__message" required></textarea>
             </div>
-            <input class="w-full bg-(--wc-blue) text-white py-2 px-4 rounded-xl hover:bg-(--wc-dark-blue) uppercase" type="submit" value="Send" />
+            <input class="w-full bg-(--wc-blue) text-white py-4 px-4 rounded-xl hover:bg-(--wc-dark-blue) uppercase" type="submit" value="Send" />
           </form>
         </div>
 			</div>			

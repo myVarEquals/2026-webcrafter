@@ -32,6 +32,7 @@ footer {
     padding: 2em 0;
 }
 
+
 h1.hero-h1 {
     font-family: var(--noto-sans);
     color: #FFF;
@@ -115,7 +116,7 @@ h1.hero-h1 {
 
 /* .menu[aria-expanded="true"] */
 
-:has(.menu:focus) #headerNav.nav-links {
+:has(.menu[aria-expanded="true"]) #headerNav.nav-links {
   display: block;
   position: absolute;
   top: calc(100% + 4px);
@@ -126,8 +127,8 @@ h1.hero-h1 {
   border-radius: 1rem;
 }
 
-@media screen and (min-width: 636px) {
-  .nav-links, :has(.menu:focus) .nav-links {
+@media screen and (min-width: 768px) {
+  .nav-links, :has(.menu[aria-expanded="true"]) .nav-links {
     margin: 0;
     display: block;
     position: static;
