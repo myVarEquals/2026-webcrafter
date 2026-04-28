@@ -21,6 +21,9 @@
     "nodemailer": "^8.0.5",
     "preact": "^10.29.1",
     "tailwindcss": "^4.2.4",
-    "vite": "^8.0.10"
-  }
+    "vite": "7.3.2"
+  },
+  "overrides": {
+    "vite": "7.3.2"
+  } 
 }
