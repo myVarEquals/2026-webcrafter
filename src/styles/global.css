@@ -131,8 +131,22 @@ h1.hero-h1 {
   display: none;
 }
 
-:has(.toggle-header[aria-expanded="true"]) .toggle-opened {
+.toggle-content p {
+  transition: all 0.3s ease;
+}
+
+.toggle-header[aria-expanded="true"] .toggle-icons .toggle-opened,
+.toggle-header[aria-expanded="true"] + .toggle-content  {
   display: block;
+}
+
+.toggle-header[aria-expanded="true"] + .toggle-content p {
+  opacity: 1;
+  margin-top: 0;
+}
+
+.toggle-header[aria-expanded="true"] .toggle-icons .toggle-closed {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {

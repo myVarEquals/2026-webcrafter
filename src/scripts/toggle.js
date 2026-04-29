@@ -9,7 +9,7 @@ const toggle = document.querySelectorAll('.toggle-header');
 
 toggle.forEach((t) => {
     t.addEventListener('click', () => {
-        const isExpanded = t.getAttribute('aria-expanded') === 'true';
+        let isExpanded = t.getAttribute('aria-expanded') === 'true';
         t.setAttribute('aria-expanded', `${!isExpanded}`);
     });
 });

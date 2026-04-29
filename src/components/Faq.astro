@@ -1,12 +1,17 @@
 ---
 const { question, answer } = Astro.props;
 ---
-<div class="flex flex-row justify-between items-center gap-4">
-    <h3 class="toggle-header font-sans text-2xl" aria-expanded="false">{question}</h3>
-    <div class="toggle-icons">
-        <i class="toggle-closed fa-solid fa-plus"></i>
-        <i class="toggle-opened fa-solid fa-minus"></i>
-    </div>    
+
+<div class="toggle-wrapper flex flex-col gap-8">
+    <div class="toggle-header flex flex-row justify-between items-center gap-4" aria-expanded="false">
+        <h3 class="font-sans text-2xl">{question}</h3>
+        <div class="toggle-icons">
+            <i class="toggle-closed fa-solid fa-plus"></i>
+            <i class="toggle-opened fa-solid fa-minus"></i>
+        </div>    
+    </div>
+    <div class="toggle-content">
+        <p class="font-sans opacity-0 ease-in-out">{answer}</p>
+    </div>
 </div>
-<p class="toggle-content font-sans">{answer}</p>
 <hr>
