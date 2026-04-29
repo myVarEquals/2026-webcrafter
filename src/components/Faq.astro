@@ -1,0 +1,12 @@
+---
+const { question, answer } = Astro.props;
+---
+<div class="flex flex-row justify-between items-center gap-4">
+    <h3 class="toggle-header font-sans text-2xl" aria-expanded="false">{question}</h3>
+    <div class="toggle-icons">
+        <i class="toggle-closed fa-solid fa-plus"></i>
+        <i class="toggle-opened fa-solid fa-minus"></i>
+    </div>    
+</div>
+<p class="toggle-content font-sans">{answer}</p>
+<hr>

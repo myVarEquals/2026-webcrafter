@@ -1,15 +1,32 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import TestimonialSection from '../components/TestimonialSection.astro';
+import FaqSection from '../components/FaqSection.astro';
 import { Image } from 'astro:assets';
-import astroMoon from '../images/astro-moon.png'
-import puzzlePiece from '../images/men-carrying-puzzle.jpg'
+import astroMoon from '../images/astro-moon.png';
+import astroProfile from '../images/astronaut-profile.jpg';
+import astroCloseUp from '../images/astronaut-closeup.jpg';
 
 const titleTag = "Lorem Ipum Dolor | Sit Amet";
 const metaDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 
 const testimonialTitle = "What Our Customers Say";
 const testimonialSubtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+
+const faqSchema = [
+	{
+		question: "What is Lorem Ipsum?",
+		answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+	},
+	{
+		question: "Why do we use it?",
+		answer: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+	},
+	{
+		question: "Where can I get some?",
+		answer: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text."
+	},
+];
 
 ---
 <BaseLayout titleTag={titleTag} metaDescription={metaDescription}>
@@ -25,7 +42,7 @@ const testimonialSubtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing 
 
 			</div>
 
-			<div class="hidden md:w-1/2 md:flex flex-col justify-center items-end p-8">
+			<div class="hidden md:w-1/2 md:flex flex-col justify-start items-end p-8">
 				<Image src={astroMoon} alt="A rocket taking off" class="w-full bg-white p-8 -mb-60 rounded-[50px] shadow-xl" />
 			</div>
 		</div>
@@ -39,12 +56,12 @@ const testimonialSubtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing 
 
 	</div>
 
-	<div class="bg-neutral-100 flex flex-col w-full md:min-h-150">
+	<div class="bg-neutral-100 flex flex-col w-full md:min-h-150 mb-20">
 
 		<div class="flex flex-col md:flex-row w-full max-w-400 m-auto">
 
 			<div class="hidden md:w-1/2 md:flex flex-col justify-center items-center p-8">
-				<Image src={puzzlePiece} alt="Men carrying a puzzle" class="w-4/5 bg-white" />
+				<Image src={astroProfile} alt="Men carrying a puzzle" class="w-full bg-white p-8 rounded-[50px] shadow-xl" />
 			</div>
 
 			<div class="w-full md:w-1/2 flex flex-col gap-6 justify-center p-8">
@@ -57,6 +74,34 @@ const testimonialSubtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing 
 
 	</div>
 
+	<div class="bg-neutral-100 flex flex-col w-full md:min-h-150 mb-20">
+
+		<div class="flex flex-col md:flex-row w-full max-w-400 m-auto">
+
+			<div class="w-full md:w-1/2 flex flex-col gap-6 justify-center p-8">
+				<h2 class="font-sans text-2xl md:text-4xl text-(--wc-blue) max-w-150">Consectetur adipiscing elit ut enim ad minim</h2>
+				<p class="font-sans text-xl text-black max-w-150">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<a class="self-start font-sans text-xl text-white bg-(--wc-blue) hover:bg-(--dk-blue) py-2 px-4 rounded shadow-xl transition-all duration-300 ease" href="/about/">Learn More</a>
+			</div>
+
+			<div class="hidden md:w-1/2 md:flex flex-col justify-center items-center p-8">
+				<Image src={astroCloseUp} alt="Men carrying a puzzle" class="w-full bg-white p-8 rounded-[50px] shadow-xl" />
+			</div>
+			
+		</div>		
+
+	</div>
+
+	<div class="bg-(--wc-blue) flex flex-col gap-8 justify-center items-center w-full max-w-400 min-h-125 m-auto p-8 rounded-2xl">
+		<h2 class="font-sans text-5xl text-center text-white max-w-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+		<p class="font-sans text-xl text-center text-white max-w-300">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin cursus quis leo a suscipit. Suspendisse quis scelerisque ipsum. Mauris mi mauris, laoreet ut congue id, condimentum at nulla. Sed vitae ex at est lobortis tincidunt ac nec sapien. Duis elementum lacinia lorem, vitae ullamcorper leo semper vitae.</p>
+		<a class="font-sans text-xl text-white hover:text-(--dk-blue) bg-(--dk-blue) hover:bg-white py-2 px-4 rounded shadow-xl transition-all duration-300 ease" href="/about/">Learn More</a>
+	</div>
+
+	<div class="bg-neutral-100 flex flex-col w-full py-20">
+
+		<FaqSection faqs={faqSchema} />
 	
+	</div>
 
 </BaseLayout>

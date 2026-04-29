@@ -1,0 +1,23 @@
+---
+import Faq from './Faq.astro';
+
+interface FaqItem {
+    question: string;
+    answer: string;
+}
+
+interface Props {
+  faqs: FaqItem[];
+}
+
+const { faqs } = Astro.props as Props;
+
+---
+
+<div class="flex flex-col gap-8 w-full max-w-200 m-auto p-8">  
+    {faqs.map(({ question, answer }) => (
+        <Faq question={question} answer={answer} />
+    ))}
+</div>
+
+
