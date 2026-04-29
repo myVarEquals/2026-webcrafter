@@ -3,7 +3,7 @@ const { question, answer } = Astro.props;
 ---
 
 <div class="toggle-wrapper flex flex-col gap-8">
-    <div class="toggle-header flex flex-row justify-between items-center gap-4" aria-expanded="false">
+    <div class="toggle-header flex flex-row justify-between items-center gap-4" role="button" aria-expanded="false">
         <h3 class="font-sans text-2xl">{question}</h3>
         <div class="toggle-icons">
             <i class="toggle-closed fa-solid fa-plus"></i>
