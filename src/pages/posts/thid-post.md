@@ -7,7 +7,7 @@ author: 'Roger'
 image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["solo"]
+tags: ["solo", "dolo"]
 ---
 # Learn the basics of SEO
 

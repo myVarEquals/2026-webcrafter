@@ -5,7 +5,9 @@ export async function GET(context) {
     title: 'Build SEO and Speed Optimized Websites',
     description: '',
     site: context.site,
-    items: await pagesGlobToRssItems(import.meta.glob('./**/*.md')),
+    items: await pagesGlobToRssItems(
+      import.meta.glob('./**/*.md'),
+    ),
     customData: `<language>en-us</language>`,
   });
 }
