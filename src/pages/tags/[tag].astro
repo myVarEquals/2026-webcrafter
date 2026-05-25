@@ -10,14 +10,14 @@ export async function getStaticPaths() {
     return uniqueTags.map((tag) => {
         const filteredPosts = allPosts.filter((post: any) => post.frontmatter.tags.includes(tag));
         return {
-            params: { tag },
-            props: { posts: filteredPosts },
+            params: { tag: tag.toLowerCase().replaceAll(' ', '-') },
+            props: { posts: filteredPosts, tag },
         };
     });
 }
 
-const { tag } = Astro.params;
-const { posts } = Astro.props;
+
+const { posts, tag } = Astro.props;
 
 ---
 <BaseLayout pageTitle={tag}>

@@ -12,7 +12,7 @@ const metaDescription = "Archive for blog Tags";
 
 <BaseLayout titleTag={titleTag} metaDescription={metaDescription}>
     <h1>Tags Archive</h1>
-    <div class="tags">{tags.map((tag) => <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>)}</div>
+    <div class="tags">{tags.map((tag) => <p class="tag"><a href={`/tags/${tag.toLowerCase().replaceAll(' ', '-')}`}>{tag}</a></p>)}</div>
 </BaseLayout>
 <style>
   a {
