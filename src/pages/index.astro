@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Container from '../components/Container.astro';
 import HeroSection from '../components/HeroSection.astro';
 import Button from '../components/Button.astro';
 import TestimonialSection from '../components/TestimonialSection.astro';
@@ -40,16 +41,14 @@ const faqSchema = [
 			url={"/contact/"} 
 			text={"Contact Us"}
 			bg={"bg-(--dk-blue)"}
-			bgHover={"white"}
-			colorHover={"black"} />
+			bgHover={"hover:bg-white"}
+			colorHover={"hover:text-black"} />
 		<Image slot="image" src={astroMoon} alt="A rocket taking off" class="w-full bg-white p-8 -mb-60 rounded-[50px] shadow-xl" />
 	</HeroSection>
 
-	<div class="bg-neutral-100 flex flex-col w-full py-20">
-
+	<Container>
 		<TestimonialSection title={testimonialTitle} subtitle={testimonialSubtitle} />
-
-	</div>
+	</Container>
 
 	<div class="bg-neutral-100 flex flex-col w-full md:min-h-150 mb-20">
 

@@ -17,13 +17,12 @@ if (!color) {
 
 if (!colorHover) {
     colorHover = "hover:text-white";
-} else {
-    colorHover = "hover:" + colorHover;
 }
 
 const combinedClasses = [bg, bgHover, color, colorHover].join(" ");
 
 ---
 
-<a class={`${combinedClasses} inline px-8 py-4 text-white font-bold hover:text-black rounded-full transition-all duration-400 ease-out`} href={url}>{text}</a>
+<a class={`${combinedClasses} self-start font-sans text-xl py-2 px-4 rounded shadow-xl transition-all duration-300 ease`} href={url}>{text}</a>
+
 
