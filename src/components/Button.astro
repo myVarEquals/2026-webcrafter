@@ -1,0 +1,29 @@
+---
+
+const { url, text } = Astro.props;
+let { bg, bgHover, color, colorHover } = Astro.props;
+
+if (!bg) {
+    bg = "bg-(--wc-blue)";
+}
+
+if(!bgHover) {
+    bgHover = "hover:bg-(--dk-blue)";
+}
+
+if (!color) {
+    color = "text-white";
+}
+
+if (!colorHover) {
+    colorHover = "hover:text-white";
+} else {
+    colorHover = "hover:" + colorHover;
+}
+
+const combinedClasses = [bg, bgHover, color, colorHover].join(" ");
+
+---
+
+<a class={`${combinedClasses} inline px-8 py-4 text-white font-bold hover:text-black rounded-full transition-all duration-400 ease-out`} href={url}>{text}</a>
+

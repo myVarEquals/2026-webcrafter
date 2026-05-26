@@ -1,7 +1,7 @@
 ---
-
-
 import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import Button from '../components/Button.astro';
 import TestimonialSection from '../components/TestimonialSection.astro';
 import FaqSection from '../components/FaqSection.astro';
 import { Image } from 'astro:assets';
@@ -33,24 +33,17 @@ const faqSchema = [
 ---
 <BaseLayout titleTag={titleTag} metaDescription={metaDescription}>
 
-	<div class="bg-(--wc-blue) flex flex-col w-full md:min-h-150 py-25 mb-30">
-
-		<div class="flex flex-col md:flex-row w-full max-w-400 m-auto">
-
-			<div class="w-full md:w-1/2 flex flex-col justify-center p-8">
-
-				<h1 class="font-sans text-lg text-white max-w-150">Lorem Ipsum Dolor Sit Amet</h1>
-				<p class="font-sans text-3xl md:text-4xl lg:text-6xl text-white max-w-150">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-			</div>
-
-			<div class="hidden md:w-1/2 md:flex flex-col justify-start items-end p-8">
-				<Image src={astroMoon} alt="A rocket taking off" class="w-full bg-white p-8 -mb-60 rounded-[50px] shadow-xl" />
-			</div>
-		</div>
-		
-
-	</div>
+	<HeroSection>
+		<h1 class="font-sans text-lg text-white max-w-150">Lorem Ipsum Dolor Sit Amet</h1>
+		<p class="font-sans text-3xl md:text-4xl lg:text-6xl text-white max-w-150">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		<Button 
+			url={"/contact/"} 
+			text={"Contact Us"}
+			bg={"bg-(--dk-blue)"}
+			bgHover={"white"}
+			colorHover={"black"} />
+		<Image slot="image" src={astroMoon} alt="A rocket taking off" class="w-full bg-white p-8 -mb-60 rounded-[50px] shadow-xl" />
+	</HeroSection>
 
 	<div class="bg-neutral-100 flex flex-col w-full py-20">
 
