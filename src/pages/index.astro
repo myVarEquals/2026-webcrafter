@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Container from '../components/Container.astro';
+import CallToAction from '../components/CallToAction.astro';
 import HeroSection from '../components/HeroSection.astro';
 import Button from '../components/Button.astro';
 import TestimonialSection from '../components/TestimonialSection.astro';
@@ -50,7 +51,7 @@ const faqSchema = [
 		<TestimonialSection title={testimonialTitle} subtitle={testimonialSubtitle} />
 	</Container>
 
-	<div class="bg-neutral-100 flex flex-col w-full md:min-h-150 mb-20">
+	<Container>
 
 		<div class="flex flex-col md:flex-row w-full max-w-400 m-auto">
 
@@ -64,12 +65,11 @@ const faqSchema = [
 				<a class="self-start font-sans text-xl text-white bg-(--wc-blue) hover:bg-(--dk-blue) py-2 px-4 rounded shadow-xl transition-all duration-300 ease" href="/about/">Learn More</a>
 			</div>
 			
-		</div>		
+		</div>	
 
-	</div>
+	</Container>
 
-	<div class="bg-neutral-100 flex flex-col w-full md:min-h-150 mb-20">
-
+	<Container>
 		<div class="flex flex-col md:flex-row w-full max-w-400 m-auto">
 
 			<div class="w-full md:w-1/2 flex flex-col gap-6 justify-center p-8">
@@ -83,14 +83,18 @@ const faqSchema = [
 			</div>
 			
 		</div>		
+	</Container>
 
-	</div>
-
-	<div class="bg-(--wc-blue) flex flex-col gap-8 justify-center items-center w-full max-w-400 min-h-125 m-auto p-8 rounded-2xl">
+	<CallToAction>
 		<h2 class="font-sans text-5xl text-center text-white max-w-200">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
 		<p class="font-sans text-xl text-center text-white max-w-300">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin cursus quis leo a suscipit. Suspendisse quis scelerisque ipsum. Mauris mi mauris, laoreet ut congue id, condimentum at nulla. Sed vitae ex at est lobortis tincidunt ac nec sapien. Duis elementum lacinia lorem, vitae ullamcorper leo semper vitae.</p>
-		<a class="font-sans text-xl text-white hover:text-(--dk-blue) bg-(--dk-blue) hover:bg-white py-2 px-4 rounded shadow-xl transition-all duration-300 ease" href="/about/">Learn More</a>
-	</div>
+		<Button 
+			url={"/about/"} 
+			text={"Learn More"}
+			bg={"bg-(--dk-blue)"}
+			bgHover={"hover:bg-white"}
+			colorHover={"hover:text-black"} />
+	</CallToAction>
 
 	<div class="bg-neutral-100 flex flex-col w-full py-20">
 
