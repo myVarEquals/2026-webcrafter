@@ -1,28 +1,22 @@
 ---
 
-const { url, text } = Astro.props;
-let { bg, bgHover, color, colorHover } = Astro.props;
-
-if (!bg) {
-    bg = "bg-(--wc-blue)";
+interface Props {
+    url: string;
+    text: string;
+    style?: "primary" | "secondary";
 }
 
-if(!bgHover) {
-    bgHover = "hover:bg-(--dk-blue)";
+const { url, text, style = "primary" } = Astro.props;
+
+const styles = {
+    primary: "bg-(--wc-blue) hover:bg-(--dk-blue) text-white hover:text-white",
+    secondary: "bg-(--dk-blue) hover:bg-white text-white hover:text-black",
 }
 
-if (!color) {
-    color = "text-white";
-}
-
-if (!colorHover) {
-    colorHover = "hover:text-white";
-}
-
-const combinedClasses = [bg, bgHover, color, colorHover].join(" ");
+const styleClasses = styles[style];
 
 ---
 
-<a class={`${combinedClasses} font-sans text-xl py-2 px-4 rounded shadow-xl transition-all duration-300 ease`} href={url}>{text}</a>
+<a class={`${styleClasses} font-sans text-xl py-2 px-4 rounded shadow-xl transition-all duration-300 ease`} href={url}>{text}</a>
 
 

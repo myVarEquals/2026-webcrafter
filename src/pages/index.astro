@@ -41,9 +41,7 @@ const faqSchema = [
 		<Button 
 			url={"/contact/"} 
 			text={"Contact Us"}
-			bg={"bg-(--dk-blue)"}
-			bgHover={"hover:bg-white"}
-			colorHover={"hover:text-black"} />
+			style={"secondary"} />
 		<Image slot="image" src={astroMoon} alt="A rocket taking off" class="w-full bg-white p-8 -mb-60 rounded-[50px] shadow-xl" />
 	</HeroSection>
 
@@ -59,10 +57,12 @@ const faqSchema = [
 				<Image src={astroProfile} alt="Men carrying a puzzle" class="w-full bg-white p-8 rounded-[50px] shadow-xl" />
 			</div>
 
-			<div class="w-full md:w-1/2 flex flex-col gap-6 justify-center p-8">
+			<div class="w-full md:w-1/2 flex flex-col gap-6 justify-center items-start p-8">
 				<h2 class="font-sans text-2xl md:text-4xl text-(--wc-blue) max-w-150">Consectetur adipiscing elit ut enim ad minim</h2>
 				<p class="font-sans text-xl text-black max-w-150">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<a class="self-start font-sans text-xl text-white bg-(--wc-blue) hover:bg-(--dk-blue) py-2 px-4 rounded shadow-xl transition-all duration-300 ease" href="/about/">Learn More</a>
+				<Button 
+					url={"/about/"} 
+					text={"Learn More"}/>
 			</div>
 			
 		</div>	
@@ -72,10 +72,12 @@ const faqSchema = [
 	<Container>
 		<div class="flex flex-col md:flex-row w-full max-w-400 m-auto">
 
-			<div class="w-full md:w-1/2 flex flex-col gap-6 justify-center p-8">
+			<div class="w-full md:w-1/2 flex flex-col gap-6 justify-center items-start p-8">
 				<h2 class="font-sans text-2xl md:text-4xl text-(--wc-blue) max-w-150">Consectetur adipiscing elit ut enim ad minim</h2>
 				<p class="font-sans text-xl text-black max-w-150">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<a class="self-start font-sans text-xl text-white bg-(--wc-blue) hover:bg-(--dk-blue) py-2 px-4 rounded shadow-xl transition-all duration-300 ease" href="/about/">Learn More</a>
+				<Button 
+					url={"/about/"} 
+					text={"Learn More"}/>
 			</div>
 
 			<div class="hidden md:w-1/2 md:flex flex-col justify-center items-center p-8">
@@ -91,9 +93,7 @@ const faqSchema = [
 		<Button 
 			url={"/about/"} 
 			text={"Learn More"}
-			bg={"bg-(--dk-blue)"}
-			bgHover={"hover:bg-white"}
-			colorHover={"hover:text-black"} />
+			style={"secondary"}/>
 	</CallToAction>
 
 	<div class="bg-neutral-100 flex flex-col w-full py-20">
